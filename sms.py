@@ -20,8 +20,8 @@ print()
 print("Mobile No: {}\nMsg: \'{}\'".format(num, txt))
 
 try:
-    account_sid = "AC4fb64e1d6f3f331490bc6ec965ae9c20"
-    auth_token = "9a797ac4f14c577554cc06039e9a6e14"
+    account_sid = "[ACC_SID]"
+    auth_token = "[YOUR_AUTH_TOKEN]"
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
