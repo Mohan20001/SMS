@@ -19,14 +19,18 @@ for i in range(1, 5):
 print()
 print("Mobile No: {}\nMsg: \'{}\'".format(num, txt))
 
-account_sid = "AC4fb64e1d6f3f331490bc6ec965ae9c20"
-auth_token = "9a797ac4f14c577554cc06039e9a6e14"
-client = Client(account_sid, auth_token)
+try:
+    account_sid = "AC4fb64e1d6f3f331490bc6ec965ae9c20"
+    auth_token = "9a797ac4f14c577554cc06039e9a6e14"
+    client = Client(account_sid, auth_token)
 
-message = client.messages.create(
-body=txt,
-from_="+12069446962",
-to=num
-)
-message.sid
-print("message sent successfully!")
+    message = client.messages.create(
+    body=txt,
+    from_="+12069446962",
+    to=num)
+
+    message.sid
+    print("message sent successfully!")
+
+except :
+    print("[Info] Please check Your Input fields (or) Network Connection!")
